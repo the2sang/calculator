@@ -20,6 +20,5 @@ pipeline {
             ])
             sh "./gradlew jacocoTestCoverageVerification"
         }
-
     }
 }
