@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh "./gradlew jacocoTestReport"
                 publishHTML (target: [
-                    reportDir: 'build/reports/jacoco/test/html',
+                    reportDir: 'reports/jacoco/test/html',
                     reportFiles: 'index.html',
                     reportName: "Jacoco Report"
                 ])
