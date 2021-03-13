@@ -35,7 +35,7 @@ pipeline {
         stage("Docker push") {
             steps {
                 sh "docker push the2sang/calculator"
-
+            }
         }
         stage("Deploy to staging") {
             steps {
