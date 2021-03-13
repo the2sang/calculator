@@ -34,7 +34,6 @@ jacocoTestCoverageVerification {
 				minimum = 0.4
 			}
 		}
-
 		rule {
 			enabled = false
 			element = 'CLASS'
