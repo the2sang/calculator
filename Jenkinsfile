@@ -27,11 +27,16 @@ pipeline {
                 sh "./gradlew build"
             }
         }
-
         stage("Docker build") {
             steps {
                 sh "docker build -t the2sang/calculator ."
             }
+        }
+        stage("Docker push") {
+            sh "docker push the2sang/calculator"
+        }
+        stage("Deploy to staging") {
+            sh "docker run -d --rm -p 8765:8080 --name calculator the2sang/calculator"
         }
     }
 }
