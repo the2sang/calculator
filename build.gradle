@@ -27,6 +27,7 @@ jacoco {
 	reportsDirectory = file("$buildDir/customJacocoReportDir")
 }
 
+
 jacocoTestCoverageVerification {
 	violationRules {
 		rule {
